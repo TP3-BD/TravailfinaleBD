@@ -1,6 +1,6 @@
 ﻿namespace TravailfinaleBD
 {
-    partial class Form1
+    partial class MainForm1
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
