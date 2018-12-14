@@ -16,5 +16,16 @@ namespace TravailfinaleBD
         {
             InitializeComponent();
         }
+
+        private void BTN_AjouterCircuit_Click(object sender, EventArgs e)
+        {
+            AjouterCircuit ajouter = new AjouterCircuit();
+            ajouter.Show();
+        }
+
+        private void BTN_SupprimerCircuit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
