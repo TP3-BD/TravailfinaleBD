@@ -51,43 +51,41 @@
             // BTN_quitter
             // 
             this.BTN_quitter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_quitter.Location = new System.Drawing.Point(878, 351);
-            this.BTN_quitter.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_quitter.Location = new System.Drawing.Point(691, 285);
             this.BTN_quitter.Name = "BTN_quitter";
-            this.BTN_quitter.Size = new System.Drawing.Size(143, 52);
+            this.BTN_quitter.Size = new System.Drawing.Size(107, 42);
             this.BTN_quitter.TabIndex = 12;
             this.BTN_quitter.Text = "Quitter";
             this.BTN_quitter.UseVisualStyleBackColor = true;
+            this.BTN_quitter.Click += new System.EventHandler(this.BTN_quitter_Click);
             // 
             // BTN_connection
             // 
             this.BTN_connection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_connection.Location = new System.Drawing.Point(728, 351);
-            this.BTN_connection.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_connection.Location = new System.Drawing.Point(579, 285);
             this.BTN_connection.Name = "BTN_connection";
-            this.BTN_connection.Size = new System.Drawing.Size(143, 52);
+            this.BTN_connection.Size = new System.Drawing.Size(107, 42);
             this.BTN_connection.TabIndex = 11;
             this.BTN_connection.Text = "Connection";
             this.BTN_connection.UseVisualStyleBackColor = true;
+            this.BTN_connection.Click += new System.EventHandler(this.BTN_connection_Click);
             // 
             // DGV_Album
             // 
             this.DGV_Album.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Album.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_Album.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Album.Location = new System.Drawing.Point(430, 30);
-            this.DGV_Album.Margin = new System.Windows.Forms.Padding(4);
+            this.DGV_Album.Location = new System.Drawing.Point(355, 24);
             this.DGV_Album.Name = "DGV_Album";
-            this.DGV_Album.Size = new System.Drawing.Size(591, 253);
+            this.DGV_Album.Size = new System.Drawing.Size(443, 206);
             this.DGV_Album.TabIndex = 10;
             // 
             // BTN_Modifiersupprimer
             // 
             this.BTN_Modifiersupprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_Modifiersupprimer.Location = new System.Drawing.Point(577, 351);
-            this.BTN_Modifiersupprimer.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Modifiersupprimer.Location = new System.Drawing.Point(466, 285);
             this.BTN_Modifiersupprimer.Name = "BTN_Modifiersupprimer";
-            this.BTN_Modifiersupprimer.Size = new System.Drawing.Size(143, 52);
+            this.BTN_Modifiersupprimer.Size = new System.Drawing.Size(107, 42);
             this.BTN_Modifiersupprimer.TabIndex = 9;
             this.BTN_Modifiersupprimer.Text = "Modifier/Supprimer";
             this.BTN_Modifiersupprimer.UseVisualStyleBackColor = true;
@@ -104,11 +102,9 @@
             this.groupBox2.Controls.Add(this.CB_ChoixCatégorie);
             this.groupBox2.Controls.Add(this.TBX_ParNom);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(25, 206);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(19, 166);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(381, 207);
+            this.groupBox2.Size = new System.Drawing.Size(322, 168);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recherche d\'un circuit";
@@ -116,19 +112,17 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(162, 129);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(158, 102);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(210, 26);
+            this.comboBox1.Size = new System.Drawing.Size(158, 23);
             this.comboBox1.TabIndex = 12;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 130);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton1.Location = new System.Drawing.Point(9, 106);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(144, 22);
+            this.radioButton1.Size = new System.Drawing.Size(123, 19);
             this.radioButton1.TabIndex = 11;
             this.radioButton1.Text = "Par Monument ";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -136,10 +130,9 @@
             // RBTN_ParCategorie
             // 
             this.RBTN_ParCategorie.AutoSize = true;
-            this.RBTN_ParCategorie.Location = new System.Drawing.Point(12, 100);
-            this.RBTN_ParCategorie.Margin = new System.Windows.Forms.Padding(4);
+            this.RBTN_ParCategorie.Location = new System.Drawing.Point(9, 81);
             this.RBTN_ParCategorie.Name = "RBTN_ParCategorie";
-            this.RBTN_ParCategorie.Size = new System.Drawing.Size(89, 22);
+            this.RBTN_ParCategorie.Size = new System.Drawing.Size(76, 19);
             this.RBTN_ParCategorie.TabIndex = 10;
             this.RBTN_ParCategorie.Text = "Par Prix";
             this.RBTN_ParCategorie.UseVisualStyleBackColor = true;
@@ -147,10 +140,9 @@
             // RBTN_ParNom
             // 
             this.RBTN_ParNom.AutoSize = true;
-            this.RBTN_ParNom.Location = new System.Drawing.Point(12, 69);
-            this.RBTN_ParNom.Margin = new System.Windows.Forms.Padding(4);
+            this.RBTN_ParNom.Location = new System.Drawing.Point(9, 56);
             this.RBTN_ParNom.Name = "RBTN_ParNom";
-            this.RBTN_ParNom.Size = new System.Drawing.Size(174, 22);
+            this.RBTN_ParNom.Size = new System.Drawing.Size(150, 19);
             this.RBTN_ParNom.TabIndex = 9;
             this.RBTN_ParNom.Text = "Par ville de départ :";
             this.RBTN_ParNom.UseVisualStyleBackColor = true;
@@ -159,10 +151,9 @@
             // 
             this.RBTN_TousLesAlbums.AutoSize = true;
             this.RBTN_TousLesAlbums.Checked = true;
-            this.RBTN_TousLesAlbums.Location = new System.Drawing.Point(12, 36);
-            this.RBTN_TousLesAlbums.Margin = new System.Windows.Forms.Padding(4);
+            this.RBTN_TousLesAlbums.Location = new System.Drawing.Point(9, 29);
             this.RBTN_TousLesAlbums.Name = "RBTN_TousLesAlbums";
-            this.RBTN_TousLesAlbums.Size = new System.Drawing.Size(159, 22);
+            this.RBTN_TousLesAlbums.Size = new System.Drawing.Size(137, 19);
             this.RBTN_TousLesAlbums.TabIndex = 8;
             this.RBTN_TousLesAlbums.TabStop = true;
             this.RBTN_TousLesAlbums.Text = "Par ordre d\'étoile";
@@ -171,10 +162,9 @@
             // BTN_Search
             // 
             this.BTN_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Search.Location = new System.Drawing.Point(267, 171);
-            this.BTN_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Search.Location = new System.Drawing.Point(237, 139);
             this.BTN_Search.Name = "BTN_Search";
-            this.BTN_Search.Size = new System.Drawing.Size(105, 28);
+            this.BTN_Search.Size = new System.Drawing.Size(79, 23);
             this.BTN_Search.TabIndex = 7;
             this.BTN_Search.Text = "Rechercher";
             this.BTN_Search.UseVisualStyleBackColor = true;
@@ -182,25 +172,24 @@
             // CB_ChoixCatégorie
             // 
             this.CB_ChoixCatégorie.FormattingEnabled = true;
-            this.CB_ChoixCatégorie.Location = new System.Drawing.Point(163, 95);
-            this.CB_ChoixCatégorie.Margin = new System.Windows.Forms.Padding(4);
+            this.CB_ChoixCatégorie.Location = new System.Drawing.Point(158, 77);
             this.CB_ChoixCatégorie.Name = "CB_ChoixCatégorie";
-            this.CB_ChoixCatégorie.Size = new System.Drawing.Size(210, 26);
+            this.CB_ChoixCatégorie.Size = new System.Drawing.Size(158, 23);
             this.CB_ChoixCatégorie.TabIndex = 4;
             // 
             // TBX_ParNom
             // 
-            this.TBX_ParNom.Location = new System.Drawing.Point(194, 66);
-            this.TBX_ParNom.Margin = new System.Windows.Forms.Padding(4);
+            this.TBX_ParNom.Location = new System.Drawing.Point(182, 54);
             this.TBX_ParNom.Name = "TBX_ParNom";
-            this.TBX_ParNom.Size = new System.Drawing.Size(178, 24);
+            this.TBX_ParNom.Size = new System.Drawing.Size(134, 21);
             this.TBX_ParNom.TabIndex = 3;
             // 
             // BTN_AjouterCircuit
             // 
-            this.BTN_AjouterCircuit.Location = new System.Drawing.Point(25, 30);
+            this.BTN_AjouterCircuit.Location = new System.Drawing.Point(19, 24);
+            this.BTN_AjouterCircuit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BTN_AjouterCircuit.Name = "BTN_AjouterCircuit";
-            this.BTN_AjouterCircuit.Size = new System.Drawing.Size(381, 61);
+            this.BTN_AjouterCircuit.Size = new System.Drawing.Size(286, 50);
             this.BTN_AjouterCircuit.TabIndex = 13;
             this.BTN_AjouterCircuit.Text = "Ajouter un Circuit";
             this.BTN_AjouterCircuit.UseVisualStyleBackColor = true;
@@ -209,17 +198,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(427, 9);
+            this.label1.Location = new System.Drawing.Point(320, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 17);
+            this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "Liste des circuit :";
             // 
             // BTN_SupprimerCircuit
             // 
-            this.BTN_SupprimerCircuit.Location = new System.Drawing.Point(25, 115);
+            this.BTN_SupprimerCircuit.Location = new System.Drawing.Point(19, 93);
+            this.BTN_SupprimerCircuit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BTN_SupprimerCircuit.Name = "BTN_SupprimerCircuit";
-            this.BTN_SupprimerCircuit.Size = new System.Drawing.Size(381, 61);
+            this.BTN_SupprimerCircuit.Size = new System.Drawing.Size(286, 50);
             this.BTN_SupprimerCircuit.TabIndex = 15;
             this.BTN_SupprimerCircuit.Text = "Supprimer ce circuit";
             this.BTN_SupprimerCircuit.UseVisualStyleBackColor = true;
@@ -227,9 +218,9 @@
             // 
             // MainForm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 426);
+            this.ClientSize = new System.Drawing.Size(821, 346);
             this.Controls.Add(this.BTN_SupprimerCircuit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BTN_AjouterCircuit);
@@ -238,9 +229,9 @@
             this.Controls.Add(this.DGV_Album);
             this.Controls.Add(this.BTN_Modifiersupprimer);
             this.Controls.Add(this.groupBox2);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Album)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
