@@ -29,60 +29,59 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CB_ChoixCatégorie1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
-            this.TB_AnnéDisque = new System.Windows.Forms.TextBox();
+            this.TB_VilleDépart = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.TB_NomArtiste = new System.Windows.Forms.TextBox();
+            this.TB_PrixCircuit = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.TB_TitreDisque = new System.Windows.Forms.TextBox();
+            this.TB_NomCircuit = new System.Windows.Forms.TextBox();
+            this.TB_VilleArriver = new System.Windows.Forms.TextBox();
+            this.TB_Durée = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TB_NBPersonneMax = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.CB_ChoixCatégorie1);
+            this.groupBox1.Controls.Add(this.TB_NBPersonneMax);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.TB_Durée);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.TB_VilleArriver);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.BTN_Ajouter);
-            this.groupBox1.Controls.Add(this.TB_AnnéDisque);
+            this.groupBox1.Controls.Add(this.TB_VilleDépart);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.TB_NomArtiste);
+            this.groupBox1.Controls.Add(this.TB_PrixCircuit);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.TB_TitreDisque);
+            this.groupBox1.Controls.Add(this.TB_NomCircuit);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(15, 13);
+            this.groupBox1.Location = new System.Drawing.Point(23, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(385, 244);
+            this.groupBox1.Size = new System.Drawing.Size(385, 274);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajouter un Circuit";
-            // 
-            // CB_ChoixCatégorie1
-            // 
-            this.CB_ChoixCatégorie1.FormattingEnabled = true;
-            this.CB_ChoixCatégorie1.Location = new System.Drawing.Point(159, 122);
-            this.CB_ChoixCatégorie1.Margin = new System.Windows.Forms.Padding(4);
-            this.CB_ChoixCatégorie1.Name = "CB_ChoixCatégorie1";
-            this.CB_ChoixCatégorie1.Size = new System.Drawing.Size(213, 26);
-            this.CB_ChoixCatégorie1.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS Gothic", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 30);
+            this.label5.Location = new System.Drawing.Point(16, 35);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(127, 15);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Nom du parcour:";
+            this.label5.Text = "Nom du Circuit:";
             // 
             // label4
             // 
@@ -98,7 +97,7 @@
             // BTN_Ajouter
             // 
             this.BTN_Ajouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Ajouter.Location = new System.Drawing.Point(277, 208);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(277, 238);
             this.BTN_Ajouter.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(100, 28);
@@ -106,58 +105,109 @@
             this.BTN_Ajouter.Text = "Ajouter";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             // 
-            // TB_AnnéDisque
+            // TB_VilleDépart
             // 
-            this.TB_AnnéDisque.Location = new System.Drawing.Point(159, 89);
-            this.TB_AnnéDisque.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_AnnéDisque.MaxLength = 4;
-            this.TB_AnnéDisque.Name = "TB_AnnéDisque";
-            this.TB_AnnéDisque.Size = new System.Drawing.Size(213, 24);
-            this.TB_AnnéDisque.TabIndex = 5;
+            this.TB_VilleDépart.Location = new System.Drawing.Point(159, 95);
+            this.TB_VilleDépart.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_VilleDépart.MaxLength = 4;
+            this.TB_VilleDépart.Name = "TB_VilleDépart";
+            this.TB_VilleDépart.Size = new System.Drawing.Size(213, 24);
+            this.TB_VilleDépart.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS Gothic", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 96);
+            this.label3.Location = new System.Drawing.Point(8, 95);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 15);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Année du disque:";
+            this.label3.Text = "Ville de départ:";
             // 
-            // TB_NomArtiste
+            // TB_PrixCircuit
             // 
-            this.TB_NomArtiste.Location = new System.Drawing.Point(159, 55);
-            this.TB_NomArtiste.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_NomArtiste.Name = "TB_NomArtiste";
-            this.TB_NomArtiste.Size = new System.Drawing.Size(213, 24);
-            this.TB_NomArtiste.TabIndex = 3;
+            this.TB_PrixCircuit.Location = new System.Drawing.Point(159, 63);
+            this.TB_PrixCircuit.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_PrixCircuit.Name = "TB_PrixCircuit";
+            this.TB_PrixCircuit.Size = new System.Drawing.Size(213, 24);
+            this.TB_PrixCircuit.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS Gothic", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 129);
+            this.label2.Location = new System.Drawing.Point(8, 127);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 15);
+            this.label2.Size = new System.Drawing.Size(135, 15);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Code catégorie:";
+            this.label2.Text = "Ville d\'arriver:";
             // 
-            // TB_TitreDisque
+            // TB_NomCircuit
             // 
-            this.TB_TitreDisque.Location = new System.Drawing.Point(159, 21);
-            this.TB_TitreDisque.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_TitreDisque.Name = "TB_TitreDisque";
-            this.TB_TitreDisque.Size = new System.Drawing.Size(213, 24);
-            this.TB_TitreDisque.TabIndex = 1;
+            this.TB_NomCircuit.Location = new System.Drawing.Point(159, 30);
+            this.TB_NomCircuit.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_NomCircuit.Name = "TB_NomCircuit";
+            this.TB_NomCircuit.Size = new System.Drawing.Size(213, 24);
+            this.TB_NomCircuit.TabIndex = 1;
+            // 
+            // TB_VilleArriver
+            // 
+            this.TB_VilleArriver.Location = new System.Drawing.Point(159, 127);
+            this.TB_VilleArriver.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_VilleArriver.MaxLength = 4;
+            this.TB_VilleArriver.Name = "TB_VilleArriver";
+            this.TB_VilleArriver.Size = new System.Drawing.Size(213, 24);
+            this.TB_VilleArriver.TabIndex = 11;
+            // 
+            // TB_Durée
+            // 
+            this.TB_Durée.Location = new System.Drawing.Point(159, 159);
+            this.TB_Durée.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_Durée.MaxLength = 4;
+            this.TB_Durée.Name = "TB_Durée";
+            this.TB_Durée.Size = new System.Drawing.Size(213, 24);
+            this.TB_Durée.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Gothic", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(80, 159);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 15);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Durée :";
+            // 
+            // TB_NBPersonneMax
+            // 
+            this.TB_NBPersonneMax.Location = new System.Drawing.Point(199, 191);
+            this.TB_NBPersonneMax.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_NBPersonneMax.MaxLength = 4;
+            this.TB_NBPersonneMax.Name = "TB_NBPersonneMax";
+            this.TB_NBPersonneMax.Size = new System.Drawing.Size(173, 24);
+            this.TB_NBPersonneMax.TabIndex = 15;
+            this.TB_NBPersonneMax.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("MS Gothic", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 191);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(191, 15);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Nombre de personne max:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // AjouterCircuit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 270);
+            this.ClientSize = new System.Drawing.Size(421, 300);
             this.Controls.Add(this.groupBox1);
             this.Name = "AjouterCircuit";
             this.Text = "AjouterCircuit";
@@ -170,14 +220,18 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox CB_ChoixCatégorie1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BTN_Ajouter;
-        private System.Windows.Forms.TextBox TB_AnnéDisque;
+        private System.Windows.Forms.TextBox TB_VilleDépart;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TB_NomArtiste;
+        private System.Windows.Forms.TextBox TB_PrixCircuit;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TB_TitreDisque;
+        private System.Windows.Forms.TextBox TB_NomCircuit;
+        private System.Windows.Forms.TextBox TB_VilleArriver;
+        private System.Windows.Forms.TextBox TB_Durée;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TB_NBPersonneMax;
+        private System.Windows.Forms.Label label6;
     }
 }
