@@ -84,6 +84,9 @@
     <EmbeddedResource Include="MainForm1.resx">
       <DependentUpon>MainForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModifierCircuit.resx">
+      <DependentUpon>ModifierCircuit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

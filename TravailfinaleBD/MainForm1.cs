@@ -16,6 +16,7 @@ namespace TravailfinaleBD
     public partial class MainForm1 : Form
     {
         public OracleConnection conn = new OracleConnection();
+        
         public MainForm1()
         {
             InitializeComponent();
@@ -30,6 +31,12 @@ namespace TravailfinaleBD
         {
             AjouterCircuit ajouter = new AjouterCircuit();
             ajouter.Show();
+        }
+
+        private void BTN_Modifier_Click(object sender, EventArgs e)
+        {
+            ModifierCircuit modifier = new ModifierCircuit();
+            modifier.Show();
         }
 
         private void BTN_SupprimerCircuit_Click(object sender, EventArgs e)
@@ -57,7 +64,7 @@ namespace TravailfinaleBD
             }
             BTN_AjouterCircuit.Enabled = true;
             BTN_Search.Enabled = true;
-            BTN_Modifiersupprimer.Enabled = true;
+            BTN_Modifier.Enabled = true;
             BTN_SupprimerCircuit.Enabled = true;
             //UPDATE_UI();
             //initier_Liste_Categorie(CB_ChoixCatégorie1);
@@ -74,6 +81,26 @@ namespace TravailfinaleBD
         {
             conn.Close();
             this.Close();
+        }
+
+        private void BTN_Search_Click(object sender, EventArgs e)
+        {
+            if (RBTN_TousLesAlbums.Checked)
+            {
+
+            }
+            if (RBTN_ParNom.Checked)
+            {
+
+            }
+            if(RBTN_ParPrix.Checked)
+            {
+
+            }
+            if (RBTN_ParMonument.Checked)
+            {
+
+            }
         }
 
         
