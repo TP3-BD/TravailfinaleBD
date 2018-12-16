@@ -33,13 +33,13 @@
             this.DGV_Album = new System.Windows.Forms.DataGridView();
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.TBX_ParPrix = new System.Windows.Forms.TextBox();
+            this.CBB_Monument = new System.Windows.Forms.ComboBox();
             this.RBTN_ParMonument = new System.Windows.Forms.RadioButton();
             this.RBTN_ParPrix = new System.Windows.Forms.RadioButton();
-            this.RBTN_ParNom = new System.Windows.Forms.RadioButton();
-            this.RBTN_TousLesAlbums = new System.Windows.Forms.RadioButton();
+            this.RBTN_ParVilleDebut = new System.Windows.Forms.RadioButton();
+            this.RBTN_ParNbEtoile = new System.Windows.Forms.RadioButton();
             this.BTN_Search = new System.Windows.Forms.Button();
-            this.CB_ChoixCatégorie = new System.Windows.Forms.ComboBox();
             this.TBX_ParNom = new System.Windows.Forms.TextBox();
             this.BTN_AjouterCircuit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -98,13 +98,13 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.TBX_ParPrix);
+            this.groupBox2.Controls.Add(this.CBB_Monument);
             this.groupBox2.Controls.Add(this.RBTN_ParMonument);
             this.groupBox2.Controls.Add(this.RBTN_ParPrix);
-            this.groupBox2.Controls.Add(this.RBTN_ParNom);
-            this.groupBox2.Controls.Add(this.RBTN_TousLesAlbums);
+            this.groupBox2.Controls.Add(this.RBTN_ParVilleDebut);
+            this.groupBox2.Controls.Add(this.RBTN_ParNbEtoile);
             this.groupBox2.Controls.Add(this.BTN_Search);
-            this.groupBox2.Controls.Add(this.CB_ChoixCatégorie);
             this.groupBox2.Controls.Add(this.TBX_ParNom);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(16, 191);
@@ -116,15 +116,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recherche d\'un circuit";
             // 
-            // comboBox1
+            // TBX_ParPrix
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(211, 131);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(209, 26);
-            this.comboBox1.TabIndex = 12;
+            this.TBX_ParPrix.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_ParPrix.Location = new System.Drawing.Point(210, 103);
+            this.TBX_ParPrix.Margin = new System.Windows.Forms.Padding(4);
+            this.TBX_ParPrix.Name = "TBX_ParPrix";
+            this.TBX_ParPrix.Size = new System.Drawing.Size(210, 24);
+            this.TBX_ParPrix.TabIndex = 13;
+            this.TBX_ParPrix.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TBX_ParPrix_MouseClick);
+            this.TBX_ParPrix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBX_ParPrix_KeyPress);
+            // 
+            // CBB_Monument
+            // 
+            this.CBB_Monument.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CBB_Monument.FormattingEnabled = true;
+            this.CBB_Monument.Location = new System.Drawing.Point(210, 135);
+            this.CBB_Monument.Margin = new System.Windows.Forms.Padding(4);
+            this.CBB_Monument.Name = "CBB_Monument";
+            this.CBB_Monument.Size = new System.Drawing.Size(209, 26);
+            this.CBB_Monument.TabIndex = 12;
+            this.CBB_Monument.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CBB_Monument_MouseClick);
             // 
             // RBTN_ParMonument
             // 
@@ -150,31 +162,31 @@
             this.RBTN_ParPrix.Text = "Par Prix";
             this.RBTN_ParPrix.UseVisualStyleBackColor = true;
             // 
-            // RBTN_ParNom
+            // RBTN_ParVilleDebut
             // 
-            this.RBTN_ParNom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.RBTN_ParNom.AutoSize = true;
-            this.RBTN_ParNom.Location = new System.Drawing.Point(12, 74);
-            this.RBTN_ParNom.Margin = new System.Windows.Forms.Padding(4);
-            this.RBTN_ParNom.Name = "RBTN_ParNom";
-            this.RBTN_ParNom.Size = new System.Drawing.Size(174, 22);
-            this.RBTN_ParNom.TabIndex = 9;
-            this.RBTN_ParNom.Text = "Par ville de départ :";
-            this.RBTN_ParNom.UseVisualStyleBackColor = true;
+            this.RBTN_ParVilleDebut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.RBTN_ParVilleDebut.AutoSize = true;
+            this.RBTN_ParVilleDebut.Location = new System.Drawing.Point(12, 74);
+            this.RBTN_ParVilleDebut.Margin = new System.Windows.Forms.Padding(4);
+            this.RBTN_ParVilleDebut.Name = "RBTN_ParVilleDebut";
+            this.RBTN_ParVilleDebut.Size = new System.Drawing.Size(174, 22);
+            this.RBTN_ParVilleDebut.TabIndex = 9;
+            this.RBTN_ParVilleDebut.Text = "Par ville de départ :";
+            this.RBTN_ParVilleDebut.UseVisualStyleBackColor = true;
             // 
-            // RBTN_TousLesAlbums
+            // RBTN_ParNbEtoile
             // 
-            this.RBTN_TousLesAlbums.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.RBTN_TousLesAlbums.AutoSize = true;
-            this.RBTN_TousLesAlbums.Checked = true;
-            this.RBTN_TousLesAlbums.Location = new System.Drawing.Point(12, 41);
-            this.RBTN_TousLesAlbums.Margin = new System.Windows.Forms.Padding(4);
-            this.RBTN_TousLesAlbums.Name = "RBTN_TousLesAlbums";
-            this.RBTN_TousLesAlbums.Size = new System.Drawing.Size(159, 22);
-            this.RBTN_TousLesAlbums.TabIndex = 8;
-            this.RBTN_TousLesAlbums.TabStop = true;
-            this.RBTN_TousLesAlbums.Text = "Par ordre d\'étoile";
-            this.RBTN_TousLesAlbums.UseVisualStyleBackColor = true;
+            this.RBTN_ParNbEtoile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.RBTN_ParNbEtoile.AutoSize = true;
+            this.RBTN_ParNbEtoile.Checked = true;
+            this.RBTN_ParNbEtoile.Location = new System.Drawing.Point(12, 41);
+            this.RBTN_ParNbEtoile.Margin = new System.Windows.Forms.Padding(4);
+            this.RBTN_ParNbEtoile.Name = "RBTN_ParNbEtoile";
+            this.RBTN_ParNbEtoile.Size = new System.Drawing.Size(159, 22);
+            this.RBTN_ParNbEtoile.TabIndex = 8;
+            this.RBTN_ParNbEtoile.TabStop = true;
+            this.RBTN_ParNbEtoile.Text = "Par ordre d\'étoile";
+            this.RBTN_ParNbEtoile.UseVisualStyleBackColor = true;
             // 
             // BTN_Search
             // 
@@ -189,24 +201,15 @@
             this.BTN_Search.UseVisualStyleBackColor = true;
             this.BTN_Search.Click += new System.EventHandler(this.BTN_Search_Click);
             // 
-            // CB_ChoixCatégorie
-            // 
-            this.CB_ChoixCatégorie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CB_ChoixCatégorie.FormattingEnabled = true;
-            this.CB_ChoixCatégorie.Location = new System.Drawing.Point(211, 100);
-            this.CB_ChoixCatégorie.Margin = new System.Windows.Forms.Padding(4);
-            this.CB_ChoixCatégorie.Name = "CB_ChoixCatégorie";
-            this.CB_ChoixCatégorie.Size = new System.Drawing.Size(209, 26);
-            this.CB_ChoixCatégorie.TabIndex = 4;
-            // 
             // TBX_ParNom
             // 
             this.TBX_ParNom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBX_ParNom.Location = new System.Drawing.Point(243, 71);
+            this.TBX_ParNom.Location = new System.Drawing.Point(211, 71);
             this.TBX_ParNom.Margin = new System.Windows.Forms.Padding(4);
             this.TBX_ParNom.Name = "TBX_ParNom";
-            this.TBX_ParNom.Size = new System.Drawing.Size(177, 24);
+            this.TBX_ParNom.Size = new System.Drawing.Size(209, 24);
             this.TBX_ParNom.TabIndex = 3;
+            this.TBX_ParNom.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TBX_ParNom_MouseClick);
             // 
             // BTN_AjouterCircuit
             // 
@@ -276,16 +279,16 @@
         private System.Windows.Forms.Button BTN_Modifier;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton RBTN_ParPrix;
-        private System.Windows.Forms.RadioButton RBTN_ParNom;
-        private System.Windows.Forms.RadioButton RBTN_TousLesAlbums;
+        private System.Windows.Forms.RadioButton RBTN_ParVilleDebut;
+        private System.Windows.Forms.RadioButton RBTN_ParNbEtoile;
         private System.Windows.Forms.Button BTN_Search;
-        private System.Windows.Forms.ComboBox CB_ChoixCatégorie;
         private System.Windows.Forms.TextBox TBX_ParNom;
         private System.Windows.Forms.Button BTN_AjouterCircuit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BTN_SupprimerCircuit;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CBB_Monument;
         private System.Windows.Forms.RadioButton RBTN_ParMonument;
+        private System.Windows.Forms.TextBox TBX_ParPrix;
     }
 }
 

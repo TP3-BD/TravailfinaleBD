@@ -34,31 +34,31 @@
             this.label6 = new System.Windows.Forms.Label();
             this.TB_Durée = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.TB_VilleArriver = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
-            this.TB_VilleDépart = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TB_PrixCircuit = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TB_NomCircuit = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.BTN_Annuler);
             this.groupBox1.Controls.Add(this.TB_NBPersonneMax);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.TB_Durée);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.TB_VilleArriver);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.BTN_Ajouter);
-            this.groupBox1.Controls.Add(this.TB_VilleDépart);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.TB_PrixCircuit);
             this.groupBox1.Controls.Add(this.label2);
@@ -126,15 +126,6 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Durée :";
             // 
-            // TB_VilleArriver
-            // 
-            this.TB_VilleArriver.Location = new System.Drawing.Point(159, 127);
-            this.TB_VilleArriver.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_VilleArriver.MaxLength = 4;
-            this.TB_VilleArriver.Name = "TB_VilleArriver";
-            this.TB_VilleArriver.Size = new System.Drawing.Size(213, 24);
-            this.TB_VilleArriver.TabIndex = 11;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -168,15 +159,6 @@
             this.BTN_Ajouter.Text = "Ajouter";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
-            // 
-            // TB_VilleDépart
-            // 
-            this.TB_VilleDépart.Location = new System.Drawing.Point(159, 95);
-            this.TB_VilleDépart.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_VilleDépart.MaxLength = 4;
-            this.TB_VilleDépart.Name = "TB_VilleDépart";
-            this.TB_VilleDépart.Size = new System.Drawing.Size(213, 24);
-            this.TB_VilleDépart.TabIndex = 5;
             // 
             // label3
             // 
@@ -216,6 +198,22 @@
             this.TB_NomCircuit.Size = new System.Drawing.Size(213, 24);
             this.TB_NomCircuit.TabIndex = 1;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(159, 93);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(213, 26);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(159, 126);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(213, 26);
+            this.comboBox2.TabIndex = 18;
+            // 
             // AjouterCircuit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -237,16 +235,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BTN_Ajouter;
-        private System.Windows.Forms.TextBox TB_VilleDépart;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TB_PrixCircuit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TB_NomCircuit;
-        private System.Windows.Forms.TextBox TB_VilleArriver;
         private System.Windows.Forms.TextBox TB_Durée;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TB_NBPersonneMax;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BTN_Annuler;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

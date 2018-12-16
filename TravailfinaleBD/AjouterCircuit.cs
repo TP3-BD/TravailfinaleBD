@@ -38,19 +38,19 @@ namespace TravailfinaleBD
             
         }
 
-        private void Inserer() //AjoutDisque
+        private void Inserer() //AjoutCircuit
         {
-            //try
-            //{
-            //    string SQLInsert = "insert into Disques(NoDisque ,TitreDisque,NomArtiste,AnneeDisque,CodeCategorie) values(NoDisquesequence.nextval,'" + TB_TitreDisque.Text + "','" + TB_NomArtiste.Text + "'," + TB_AnnéDisque.Text + "," + "(select CodeCategorie from Categories where NomCategorie ='" + CB_ChoixCatégorie1.SelectedItem.ToString() + "'))";
-            //    OracleCommand Insert = new OracleCommand(SQLInsert, conn);
-            //    Insert.ExecuteNonQuery();
-            //    MessageBox.Show("Album ajoutés");
-            //}
-            //catch (Exception me)
-            //{
-            //    MessageBox.Show(me.Message.ToString());
-            //}
+            try
+            {
+                string SQLInsert = "insert into circuit(Nom ,Prix,VilleDebut,VilleArrivee,NombreMax,Duree,NumCircuit) values('"+TB_NomCircuit.Text +"'," + TB_PrixCircuit.Text + ",)";
+                OracleCommand Insert = new OracleCommand(SQLInsert, conn);
+                Insert.ExecuteNonQuery();
+                MessageBox.Show("Album ajoutés");
+            }
+            catch (Exception me)
+            {
+                MessageBox.Show(me.Message.ToString());
+            }
         }
     }
 }

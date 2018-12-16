@@ -23,17 +23,33 @@ namespace TravailfinaleBD
         }
         private void MainForm1_Load(object sender, EventArgs e)
         {
+            Disable_TextBox();
+        }
+
+        private void Enable_TextBox()
+        {
+            BTN_AjouterCircuit.Enabled = true;
+            BTN_Search.Enabled = true;
+            BTN_Modifier.Enabled = true;
+            BTN_SupprimerCircuit.Enabled = true;
+            BTN_Modifier.Enabled = true;
+        }
+
+        private void Disable_TextBox()
+        {
             BTN_AjouterCircuit.Enabled = false;
             BTN_Search.Enabled = false;
             BTN_SupprimerCircuit.Enabled = false;
+            BTN_Modifier.Enabled = false;
         }
-        private void BTN_AjouterCircuit_Click(object sender, EventArgs e)
+
+        private void BTN_AjouterCircuit_Click(object sender, EventArgs e)//to do
         {
             AjouterCircuit ajouter = new AjouterCircuit();
             ajouter.Show();
         }
 
-        private void BTN_Modifier_Click(object sender, EventArgs e)
+        private void BTN_Modifier_Click(object sender, EventArgs e)//to so
         {
             ModifierCircuit modifier = new ModifierCircuit();
             modifier.Show();
@@ -41,7 +57,11 @@ namespace TravailfinaleBD
 
         private void BTN_SupprimerCircuit_Click(object sender, EventArgs e)
         {
-
+            var result = MessageBox.Show("Voulez vous vraiment supprimer ce circuit?", "Supprimer", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                //to do 
+            }
         }
 
         private void BTN_connection_Click(object sender, EventArgs e)
@@ -62,19 +82,11 @@ namespace TravailfinaleBD
             {
                 MessageBox.Show(sqlConn.Message.ToString());
             }
-            BTN_AjouterCircuit.Enabled = true;
-            BTN_Search.Enabled = true;
-            BTN_Modifier.Enabled = true;
-            BTN_SupprimerCircuit.Enabled = true;
-            //UPDATE_UI();
-            //initier_Liste_Categorie(CB_ChoixCatégorie1);
-            //initier_Liste_Categorie(CB_ChoixCatégorie);
-            //CB_ChoixCatégorie.SelectedIndex = 0;
-            //CB_ChoixCatégorie1.SelectedIndex = 0;
-            //RBTN_TousLesAlbums.Select();
-            //CB_ChoixCatégorie.DropDownStyle = ComboBoxStyle.DropDownList;
-            //CB_ChoixCatégorie1.DropDownStyle = ComboBoxStyle.DropDownList;
-            //afficherDGV();
+            Enable_TextBox();
+            initier_ListeMonument(CBB_Monument);
+            RBTN_ParNbEtoile.Select();
+            CBB_Monument.DropDownStyle = ComboBoxStyle.DropDownList;
+            afficherDGV();
         }
 
         private void BTN_quitter_Click(object sender, EventArgs e)
@@ -85,24 +97,153 @@ namespace TravailfinaleBD
 
         private void BTN_Search_Click(object sender, EventArgs e)
         {
-            if (RBTN_TousLesAlbums.Checked)
+            if (RBTN_ParNbEtoile.Checked)
             {
-
+                afficherDGV();
             }
-            if (RBTN_ParNom.Checked)
+            if (RBTN_ParVilleDebut.Checked)
             {
-
+                AfficherParVilleDebut(TBX_ParNom.Text);//a faire
             }
             if(RBTN_ParPrix.Checked)
             {
-
+                AfficherParPrix(TBX_ParPrix.Text);
             }
             if (RBTN_ParMonument.Checked)
             {
-
+                AfficherParMonument(CBB_Monument.SelectedItem.ToString());//a faire
             }
         }
 
-        
+        private DataSet monDataSet = new DataSet();
+
+        private void afficherDGV()
+        {
+            try
+            {
+                string Tomastatar = "Select Nom,Prix,VilleDebut, VilleArrivee from Circuit";//ajouter le nombre détoile
+                OracleDataAdapter Adapter1 = new OracleDataAdapter(Tomastatar, conn);
+                // On vérifie que le DataSet ne contient pas de Data Table de nom "ListeEtudiants"
+                if (monDataSet.Tables.Contains("ListeCircuit"))
+                {
+                    monDataSet.Tables["ListeCircuit"].Clear();
+                }
+                // on rempli le DataSet
+                Adapter1.Fill(monDataSet, "ListeCircuit");
+                Adapter1.Dispose();
+                //on fait une liaison des données entre le DGV et le DataSet pour ListeEtudiants
+                BindingSource maSource;
+                maSource = new BindingSource(monDataSet, "ListeCircuit");
+                DGV_Album.DataSource = maSource;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
+        private void AfficherParVilleDebut(string NomVille)//a completer
+        {
+            try
+            {
+                string sql3 = "Select Nom,Prix,VilleDebut, VilleArrivee from Circuit where VilleDebut ='" + NomVille + "'";
+                OracleDataAdapter Adapter1 = new OracleDataAdapter(sql3, conn);
+                // On vérifie que le DataSet ne contient pas de Data Table de nom "ListeEtudiants"
+                if (monDataSet.Tables.Contains("ListeCircuit"))
+                {
+                    monDataSet.Tables["ListeCircuit"].Clear();
+                }
+                // on rempli le DataSet
+                Adapter1.Fill(monDataSet, "ListeCircuit");
+                Adapter1.Dispose();
+            }
+            catch (Exception sqlerror)
+            {
+                MessageBox.Show(sqlerror.Message.ToString());
+            }
+        }
+        private void AfficherParPrix(string Prix)
+        {
+            try
+            {
+                string sql3 = "Select Nom,Prix,VilleDebut, VilleArrivee from Circuit where Prix <" + Prix;
+                OracleDataAdapter Adapter1 = new OracleDataAdapter(sql3, conn);
+                // On vérifie que le DataSet ne contient pas de Data Table de nom "ListeEtudiants"
+                if (monDataSet.Tables.Contains("ListeCircuit"))
+                {
+                    monDataSet.Tables["ListeCircuit"].Clear();
+                }
+                // on rempli le DataSet
+                Adapter1.Fill(monDataSet, "ListeCircuit");
+                Adapter1.Dispose();
+            }
+            catch (Exception sqlerror)
+            {
+                MessageBox.Show(sqlerror.Message.ToString());
+            }
+        }
+        private void AfficherParMonument(string Prix)//a faire plus tard 
+        {
+            try
+            {
+                string sql3 = "Select Nom,Prix,VilleDebut, VilleArrivee from Circuit where Prix =" + Prix;
+                OracleDataAdapter Adapter1 = new OracleDataAdapter(sql3, conn);
+                // On vérifie que le DataSet ne contient pas de Data Table de nom "ListeEtudiants"
+                if (monDataSet.Tables.Contains("ListeCircuit"))
+                {
+                    monDataSet.Tables["ListeCircuit"].Clear();
+                }
+                // on rempli le DataSet
+                Adapter1.Fill(monDataSet, "ListeCircuit");
+                Adapter1.Dispose();
+            }
+            catch (Exception sqlerror)
+            {
+                MessageBox.Show(sqlerror.Message.ToString());
+            }
+        }
+
+        private void CBB_Monument_MouseClick(object sender, MouseEventArgs e)
+        {
+            RBTN_ParMonument.Checked = true;
+        }
+
+        private void TBX_ParNom_MouseClick(object sender, MouseEventArgs e)
+        {
+            RBTN_ParVilleDebut.Checked = true;
+        }
+
+        private void TBX_ParPrix_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void TBX_ParPrix_MouseClick(object sender, MouseEventArgs e)
+        {
+            RBTN_ParPrix.Checked = true;
+        }
+
+
+        private void initier_ListeMonument(ComboBox CBB)
+        {
+            try
+            {
+                CBB.Items.Clear();
+                string sql3 = "Select Nom from Monument";
+                OracleCommand Requete3 = new OracleCommand(sql3, conn);
+                OracleDataReader reader3 = Requete3.ExecuteReader();
+
+                while (reader3.Read())
+                {
+                    CBB.Items.Add(reader3.GetString(0));
+                }
+                reader3.Close();
+            }
+            catch (Exception sqlerror)
+            {
+                MessageBox.Show(sqlerror.Message.ToString());
+            }
+            CBB.SelectedIndex = 0;
+        }
     }
 }
