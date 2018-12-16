@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 using Oracle.ManagedDataAccess.Types;
-
+using Validation;
 
 namespace TravailfinaleBD
 {
     public partial class AjouterCircuit : Form
     {
+
+        ValidationProvider validation;
         public string[] myTab = new string[14];
         public OracleConnection conn;
         public DataSet monDataSet;
@@ -28,17 +30,12 @@ namespace TravailfinaleBD
             this.Close();
         }
 
-        private void BTN_Ajouter_Click(object sender, EventArgs e)
-        {
-            Inserer_Circuit();
-            this.Close();
-        }
-
         private void AjouterCircuit_Load(object sender, EventArgs e)
         {
             Initier_CBB_Ville(CBB_VilleArrivee);
             Initier_CBB_Ville(CBB_VilleDepart);
             BTN_Ajouter.Enabled = false;
+            Load_validation();
         }
 
         private void Inserer_Circuit() //AjoutCircuit
@@ -67,7 +64,7 @@ namespace TravailfinaleBD
                 Insert.Parameters.Add(OraVilleA);
                 Insert.Parameters.Add(OraNBMax);
                 Insert.Parameters.Add(OraDuree);
-                               
+
 
                 Insert.ExecuteNonQuery();
                 Adapter.Update(monDataSet.Tables["ListeCircuit"]);
@@ -83,7 +80,7 @@ namespace TravailfinaleBD
 
         private void Inserer_Circuit_Monument()
         {
-
+            //a faire
         }
 
 
@@ -118,6 +115,39 @@ namespace TravailfinaleBD
             {
                 BTN_Ajouter.Enabled = true;
             }
+        }
+
+        private void Load_validation()
+        {
+            validation = new ValidationProvider(this,submitTask);
+            validation.AddControlToValidate(TB_NomCircuit, Validate_Nom);
+            validation.AddControlToValidate(TB_NBPersonneMax, Validate_NBMax);
+            validation.AddControlToValidate(TB_Durée, Validate_Duree);
+        }
+        private bool Validate_Nom(ref string message)
+        {
+            message = "Nom manquant";
+            return TB_NomCircuit.Text != "";
+        }
+        private bool Validate_NBMax(ref string message)
+        {
+            message = "Nombre de personne max manquant";
+            return TB_NomCircuit.Text != "";
+        }
+        private bool Validate_Duree(ref string message)
+        {
+            message = "durée du ciruit manquant";
+            return TB_NomCircuit.Text != "";
+        }
+
+        private void submitTask()
+        {
+            Inserer_Circuit();
+        }
+
+        private void TB_Durée_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

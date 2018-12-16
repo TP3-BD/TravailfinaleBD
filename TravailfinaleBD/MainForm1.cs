@@ -26,6 +26,7 @@ namespace TravailfinaleBD
         private void MainForm1_Load(object sender, EventArgs e)
         {
             Disable_TextBox();
+            
         }
 
         private void Enable_TextBox()
@@ -52,7 +53,11 @@ namespace TravailfinaleBD
             ajouter.monDataSet = monDataSet;
             ajouter.Adapter = Adapter1;
             ajouter.Show();
-            //afficherDGV();
+            if (ajouter.DialogResult == DialogResult.OK)
+            {
+                
+            }
+            afficherDGV();
         }
 
         private void BTN_Modifier_Click(object sender, EventArgs e)//to so
