@@ -44,6 +44,8 @@
             this.BTN_AjouterCircuit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BTN_SupprimerCircuit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Album)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -241,15 +243,39 @@
             this.BTN_SupprimerCircuit.Name = "BTN_SupprimerCircuit";
             this.BTN_SupprimerCircuit.Size = new System.Drawing.Size(440, 51);
             this.BTN_SupprimerCircuit.TabIndex = 15;
-            this.BTN_SupprimerCircuit.Text = "Supprimer ce circuit";
+            this.BTN_SupprimerCircuit.Text = "Supprimer un monument du circuit sélectionné";
             this.BTN_SupprimerCircuit.UseVisualStyleBackColor = true;
             this.BTN_SupprimerCircuit.Click += new System.EventHandler(this.BTN_SupprimerCircuit_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(663, 370);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 52);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Ajout d\'un monument";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(512, 370);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(143, 52);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Recherche de monument";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // MainForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1124, 438);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.BTN_SupprimerCircuit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BTN_AjouterCircuit);
@@ -289,6 +315,8 @@
         private System.Windows.Forms.ComboBox CBB_Monument;
         private System.Windows.Forms.RadioButton RBTN_ParMonument;
         private System.Windows.Forms.TextBox TBX_ParPrix;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

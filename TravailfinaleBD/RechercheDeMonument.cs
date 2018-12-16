@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace TravailfinaleBD
 {
-    public partial class AjouterMonument : Form
+    public partial class RechercheDeMonument : Form
     {
-        public AjouterMonument()
+        public RechercheDeMonument()
         {
             InitializeComponent();
         }
-
-        private void AjouterMonument_Load(object sender, EventArgs e)
-        {
-
-        }
-
-      
     }
 }
