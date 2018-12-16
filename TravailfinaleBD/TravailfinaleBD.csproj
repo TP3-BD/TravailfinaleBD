@@ -58,6 +58,12 @@
     <Compile Include="AjouterMonument.Designer.cs">
       <DependentUpon>AjouterMonument.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChoixMonument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoixMonument.Designer.cs">
+      <DependentUpon>ChoixMonument.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </Compile>
     <EmbeddedResource Include="AjouterCircuit.resx">
       <DependentUpon>AjouterCircuit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoixMonument.resx">
+      <DependentUpon>ChoixMonument.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm1.resx">
       <DependentUpon>MainForm1.cs</DependentUpon>

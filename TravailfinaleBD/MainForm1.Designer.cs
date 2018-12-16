@@ -142,7 +142,7 @@
             // 
             this.RBTN_ParMonument.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.RBTN_ParMonument.AutoSize = true;
-            this.RBTN_ParMonument.Location = new System.Drawing.Point(12, 135);
+            this.RBTN_ParMonument.Location = new System.Drawing.Point(27, 133);
             this.RBTN_ParMonument.Margin = new System.Windows.Forms.Padding(4);
             this.RBTN_ParMonument.Name = "RBTN_ParMonument";
             this.RBTN_ParMonument.Size = new System.Drawing.Size(144, 22);
@@ -154,7 +154,7 @@
             // 
             this.RBTN_ParPrix.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.RBTN_ParPrix.AutoSize = true;
-            this.RBTN_ParPrix.Location = new System.Drawing.Point(12, 105);
+            this.RBTN_ParPrix.Location = new System.Drawing.Point(27, 103);
             this.RBTN_ParPrix.Margin = new System.Windows.Forms.Padding(4);
             this.RBTN_ParPrix.Name = "RBTN_ParPrix";
             this.RBTN_ParPrix.Size = new System.Drawing.Size(89, 22);
@@ -166,12 +166,12 @@
             // 
             this.RBTN_ParVilleDebut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.RBTN_ParVilleDebut.AutoSize = true;
-            this.RBTN_ParVilleDebut.Location = new System.Drawing.Point(12, 74);
+            this.RBTN_ParVilleDebut.Location = new System.Drawing.Point(27, 74);
             this.RBTN_ParVilleDebut.Margin = new System.Windows.Forms.Padding(4);
             this.RBTN_ParVilleDebut.Name = "RBTN_ParVilleDebut";
-            this.RBTN_ParVilleDebut.Size = new System.Drawing.Size(174, 22);
+            this.RBTN_ParVilleDebut.Size = new System.Drawing.Size(164, 22);
             this.RBTN_ParVilleDebut.TabIndex = 9;
-            this.RBTN_ParVilleDebut.Text = "Par ville de départ :";
+            this.RBTN_ParVilleDebut.Text = "Par ville de départ";
             this.RBTN_ParVilleDebut.UseVisualStyleBackColor = true;
             // 
             // RBTN_ParNbEtoile
@@ -179,7 +179,7 @@
             this.RBTN_ParNbEtoile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.RBTN_ParNbEtoile.AutoSize = true;
             this.RBTN_ParNbEtoile.Checked = true;
-            this.RBTN_ParNbEtoile.Location = new System.Drawing.Point(12, 41);
+            this.RBTN_ParNbEtoile.Location = new System.Drawing.Point(27, 44);
             this.RBTN_ParNbEtoile.Margin = new System.Windows.Forms.Padding(4);
             this.RBTN_ParNbEtoile.Name = "RBTN_ParNbEtoile";
             this.RBTN_ParNbEtoile.Size = new System.Drawing.Size(159, 22);

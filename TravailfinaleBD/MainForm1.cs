@@ -16,7 +16,9 @@ namespace TravailfinaleBD
     public partial class MainForm1 : Form
     {
         public OracleConnection conn = new OracleConnection();
-        
+        private DataSet monDataSet = new DataSet();
+        private OracleDataAdapter Adapter1 = new OracleDataAdapter();
+
         public MainForm1()
         {
             InitializeComponent();
@@ -46,7 +48,11 @@ namespace TravailfinaleBD
         private void BTN_AjouterCircuit_Click(object sender, EventArgs e)//to do
         {
             AjouterCircuit ajouter = new AjouterCircuit();
+            ajouter.conn = conn;
+            ajouter.monDataSet = monDataSet;
+            ajouter.Adapter = Adapter1;
             ajouter.Show();
+            //afficherDGV();
         }
 
         private void BTN_Modifier_Click(object sender, EventArgs e)//to so
@@ -115,14 +121,14 @@ namespace TravailfinaleBD
             }
         }
 
-        private DataSet monDataSet = new DataSet();
+        
 
         private void afficherDGV()
         {
             try
             {
                 string Tomastatar = "Select Nom,Prix,VilleDebut, VilleArrivee from Circuit";//ajouter le nombre détoile
-                OracleDataAdapter Adapter1 = new OracleDataAdapter(Tomastatar, conn);
+               Adapter1.SelectCommand = new OracleCommand(Tomastatar, conn);
                 // On vérifie que le DataSet ne contient pas de Data Table de nom "ListeEtudiants"
                 if (monDataSet.Tables.Contains("ListeCircuit"))
                 {
@@ -147,7 +153,7 @@ namespace TravailfinaleBD
             try
             {
                 string sql3 = "Select Nom,Prix,VilleDebut, VilleArrivee from Circuit where VilleDebut ='" + NomVille + "'";
-                OracleDataAdapter Adapter1 = new OracleDataAdapter(sql3, conn);
+                Adapter1.SelectCommand = new OracleCommand(sql3, conn);
                 // On vérifie que le DataSet ne contient pas de Data Table de nom "ListeEtudiants"
                 if (monDataSet.Tables.Contains("ListeCircuit"))
                 {
@@ -167,7 +173,7 @@ namespace TravailfinaleBD
             try
             {
                 string sql3 = "Select Nom,Prix,VilleDebut, VilleArrivee from Circuit where Prix <" + Prix;
-                OracleDataAdapter Adapter1 = new OracleDataAdapter(sql3, conn);
+                Adapter1.SelectCommand = new OracleCommand(sql3, conn);
                 // On vérifie que le DataSet ne contient pas de Data Table de nom "ListeEtudiants"
                 if (monDataSet.Tables.Contains("ListeCircuit"))
                 {
@@ -187,7 +193,7 @@ namespace TravailfinaleBD
             try
             {
                 string sql3 = "Select Nom,Prix,VilleDebut, VilleArrivee from Circuit where Prix =" + Prix;
-                OracleDataAdapter Adapter1 = new OracleDataAdapter(sql3, conn);
+                Adapter1.SelectCommand = new OracleCommand(sql3, conn);
                 // On vérifie que le DataSet ne contient pas de Data Table de nom "ListeEtudiants"
                 if (monDataSet.Tables.Contains("ListeCircuit"))
                 {
