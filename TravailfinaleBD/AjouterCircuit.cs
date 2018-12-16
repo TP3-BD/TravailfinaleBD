@@ -21,13 +21,18 @@ namespace TravailfinaleBD
         public OracleConnection conn;
         public DataSet monDataSet;
         public OracleDataAdapter Adapter = new OracleDataAdapter();
+
+
         public AjouterCircuit()
         {
             InitializeComponent();
         }
-        private void BTN_Annuler_Click(object sender, EventArgs e)
+
+        
+
+        private void TB_Durée_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.Close();
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         private void AjouterCircuit_Load(object sender, EventArgs e)
@@ -145,9 +150,6 @@ namespace TravailfinaleBD
             Inserer_Circuit();
         }
 
-        private void TB_Durée_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
+        
     }
 }

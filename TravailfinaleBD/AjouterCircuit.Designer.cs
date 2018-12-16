@@ -91,7 +91,6 @@
             this.BTN_Annuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BTN_Annuler.Name = "BTN_Annuler";
             this.BTN_Annuler.UseVisualStyleBackColor = true;
-            this.BTN_Annuler.Click += new System.EventHandler(this.BTN_Annuler_Click);
             // 
             // TB_NBPersonneMax
             // 
