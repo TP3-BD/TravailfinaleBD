@@ -84,6 +84,7 @@
     <Compile Include="SupprimerMonument.Designer.cs">
       <DependentUpon>SupprimerMonument.cs</DependentUpon>
     </Compile>
+    <Compile Include="ValidationProvider.cs" />
     <EmbeddedResource Include="AjouterCircuit.resx">
       <DependentUpon>AjouterCircuit.cs</DependentUpon>
     </EmbeddedResource>

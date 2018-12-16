@@ -38,6 +38,7 @@ namespace TravailfinaleBD
         {
             Initier_CBB_Ville(CBB_VilleArrivee);
             Initier_CBB_Ville(CBB_VilleDepart);
+            BTN_Ajouter.Enabled = false;
         }
 
         private void Inserer_Circuit() //AjoutCircuit
@@ -80,6 +81,11 @@ namespace TravailfinaleBD
             }
         }
 
+        private void Inserer_Circuit_Monument()
+        {
+
+        }
+
 
         private void Initier_CBB_Ville(ComboBox CBB)
         {
@@ -107,9 +113,11 @@ namespace TravailfinaleBD
         {
             ChoixMonument choix = new ChoixMonument();
             choix.conn = conn;
-            choix.Show();
-            choix.myTab = myTab;
-
+            choix.ShowDialog();
+            if (choix.DialogResult == DialogResult.OK)
+            {
+                BTN_Ajouter.Enabled = true;
+            }
         }
     }
 }
