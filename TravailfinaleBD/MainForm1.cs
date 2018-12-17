@@ -82,7 +82,7 @@ namespace TravailfinaleBD
             var result = MessageBox.Show("Voulez vous vraiment supprimer ce circuit?", "Supprimer", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                //to do 
+                //a faire
             }
         }
 

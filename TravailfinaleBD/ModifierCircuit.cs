@@ -17,6 +17,7 @@ namespace TravailfinaleBD
      
         public partial class ModifierCircuit : Form
         {
+         
         public string NomCircuit;
         public string VilleD;
         public string VilleA;
@@ -50,6 +51,15 @@ namespace TravailfinaleBD
                 Initier_CBB_Ville(CBB_VilleDepart);
                 BTN_Ajouter.Enabled = false;
                 Load_validation();
+        }
+
+        private void supprimer_circuit()
+        {
+            //a faire 
+        }
+        private void supprimer_CircuitMonument()
+        {
+            //a faire
         }
         
 
