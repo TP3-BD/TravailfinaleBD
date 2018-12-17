@@ -113,6 +113,7 @@
             this.BTN_Annuler.TabIndex = 16;
             this.BTN_Annuler.Text = "Annuler";
             this.BTN_Annuler.UseVisualStyleBackColor = true;
+            this.BTN_Annuler.Click += new System.EventHandler(this.BTN_Annuler_Click);
             // 
             // TB_NBPersonneMax
             // 
@@ -215,8 +216,10 @@
             // 
             // ModifierCircuit
             // 
+            this.AcceptButton = this.BTN_Ajouter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BTN_Annuler;
             this.ClientSize = new System.Drawing.Size(440, 282);
             this.Controls.Add(this.groupBox1);
             this.Name = "ModifierCircuit";

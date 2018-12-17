@@ -162,7 +162,7 @@ namespace TravailfinaleBD
             {
                 MessageBox.Show(e.Message.ToString());
             }
-            DGV_Album.CurrentCell = DGV_Album.Rows[0].Cells[0];
+            DGV_Album.UpdateCellValue(0, 0);
         }
 
         private void AfficherParVilleDebut(string NomVille)//a completer
@@ -269,10 +269,11 @@ namespace TravailfinaleBD
             CBB.SelectedIndex = 0;
         }
 
-        private void DGV_Album_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void DGV_Album_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
+            
                 DataGridViewRow row = this.DGV_Album.Rows[e.RowIndex];
                 NomCircuit = row.Cells["Nom"].Value.ToString();
                 VilleD = row.Cells["VilleDebut"].Value.ToString();
@@ -280,7 +281,7 @@ namespace TravailfinaleBD
                 Duree = row.Cells["Duree"].Value.ToString();
                 NbMax = row.Cells["NombreMax"].Value.ToString();
 
-            }
+            
         }
     }
 }

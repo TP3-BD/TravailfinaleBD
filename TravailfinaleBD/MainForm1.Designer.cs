@@ -84,7 +84,7 @@
             this.DGV_Album.Name = "DGV_Album";
             this.DGV_Album.Size = new System.Drawing.Size(596, 296);
             this.DGV_Album.TabIndex = 10;
-            this.DGV_Album.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Album_CellContentClick);
+            this.DGV_Album.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Album_CellValueChanged);
             // 
             // BTN_Modifier
             // 

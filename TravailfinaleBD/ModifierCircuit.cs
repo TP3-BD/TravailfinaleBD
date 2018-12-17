@@ -203,5 +203,10 @@ namespace TravailfinaleBD
             }
             myTab = choix.myTab;
         }
+
+        private void BTN_Annuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
