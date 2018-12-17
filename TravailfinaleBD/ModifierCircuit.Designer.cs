@@ -81,6 +81,7 @@
             this.BT_ChoixMonuments.TabIndex = 19;
             this.BT_ChoixMonuments.Text = "Choix des monuments";
             this.BT_ChoixMonuments.UseVisualStyleBackColor = true;
+            this.BT_ChoixMonuments.Click += new System.EventHandler(this.BT_ChoixMonuments_Click_1);
             // 
             // CBB_VilleArrivee
             // 

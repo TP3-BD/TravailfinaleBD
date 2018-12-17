@@ -141,17 +141,7 @@ namespace TravailfinaleBD
                 CBB.SelectedIndex = 0;
             }
 
-            private void BT_ChoixMonuments_Click(object sender, EventArgs e)
-            {
-                ChoixMonument choix = new ChoixMonument();
-                choix.conn = conn;
-                choix.ShowDialog();
-                if (choix.DialogResult == DialogResult.OK)
-                {
-                    BTN_Ajouter.Enabled = true;
-                }
-                myTab = choix.myTab;
-            }
+            
 
             private void Load_validation()
             {
@@ -201,6 +191,17 @@ namespace TravailfinaleBD
                 }
             }
         }
-        
+
+        private void BT_ChoixMonuments_Click_1(object sender, EventArgs e)
+        {
+            ChoixMonument choix = new ChoixMonument();
+            choix.conn = conn;
+            choix.ShowDialog();
+            if (choix.DialogResult == DialogResult.OK)
+            {
+                BTN_Ajouter.Enabled = true;
+            }
+            myTab = choix.myTab;
+        }
     }
 }
