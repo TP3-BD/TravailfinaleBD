@@ -14,11 +14,18 @@ using Validation;
 
 namespace TravailfinaleBD
     {
+     
         public partial class ModifierCircuit : Form
         {
+        public string NomCircuit;
+        public string VilleD;
+        public string VilleA;
+        public string Duree;
+        public string NbMax;
+        public string[] myTab = new string[5];
 
         ValidationProvider validation;
-        public string[] myTab = new string[14];
+        
         public OracleConnection conn;
         public DataSet monDataSet;
         public OracleDataAdapter Adapter = new OracleDataAdapter();
@@ -38,6 +45,7 @@ namespace TravailfinaleBD
 
         private void ModifierCircuit_Load(object sender, EventArgs e)
         {
+                initier_TBX();
                 Initier_CBB_Ville(CBB_VilleArrivee);
                 Initier_CBB_Ville(CBB_VilleDepart);
                 BTN_Ajouter.Enabled = false;
@@ -164,9 +172,25 @@ namespace TravailfinaleBD
                 Inserer_Circuit_Monument();
             }
 
+
+
+        private void initier_TBX()
+        {
+            TB_NomCircuit.Text = NomCircuit;
+            TB_Durée.Text = Duree;
+            TB_NBPersonneMax.Text = NbMax;
+            foreach (var items in CBB_VilleDepart.Items)
+            {
+                if (items.ToString() == VilleD)
+                {
+                    CBB_VilleDepart.SelectedItem = items;
+                }
+                if (items.ToString() == VilleA)
+                {
+                    CBB_VilleArrivee.SelectedItem = items;
+                }
+            }
+        }
         
     }
 }
-
-
-

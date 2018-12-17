@@ -76,12 +76,14 @@
             // CBB_VilleArrivee
             // 
             resources.ApplyResources(this.CBB_VilleArrivee, "CBB_VilleArrivee");
+            this.CBB_VilleArrivee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBB_VilleArrivee.FormattingEnabled = true;
             this.CBB_VilleArrivee.Name = "CBB_VilleArrivee";
             // 
             // CBB_VilleDepart
             // 
             resources.ApplyResources(this.CBB_VilleDepart, "CBB_VilleDepart");
+            this.CBB_VilleDepart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBB_VilleDepart.FormattingEnabled = true;
             this.CBB_VilleDepart.Name = "CBB_VilleDepart";
             // 

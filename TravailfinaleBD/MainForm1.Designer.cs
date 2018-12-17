@@ -53,10 +53,10 @@
             // BTN_quitter
             // 
             this.BTN_quitter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_quitter.Location = new System.Drawing.Point(961, 370);
+            this.BTN_quitter.Location = new System.Drawing.Point(664, 358);
             this.BTN_quitter.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_quitter.Name = "BTN_quitter";
-            this.BTN_quitter.Size = new System.Drawing.Size(143, 52);
+            this.BTN_quitter.Size = new System.Drawing.Size(143, 49);
             this.BTN_quitter.TabIndex = 12;
             this.BTN_quitter.Text = "Quitter";
             this.BTN_quitter.UseVisualStyleBackColor = true;
@@ -65,10 +65,10 @@
             // BTN_connection
             // 
             this.BTN_connection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_connection.Location = new System.Drawing.Point(810, 370);
+            this.BTN_connection.Location = new System.Drawing.Point(966, 358);
             this.BTN_connection.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_connection.Name = "BTN_connection";
-            this.BTN_connection.Size = new System.Drawing.Size(143, 52);
+            this.BTN_connection.Size = new System.Drawing.Size(138, 49);
             this.BTN_connection.TabIndex = 11;
             this.BTN_connection.Text = "Connection";
             this.BTN_connection.UseVisualStyleBackColor = true;
@@ -84,6 +84,7 @@
             this.DGV_Album.Name = "DGV_Album";
             this.DGV_Album.Size = new System.Drawing.Size(591, 296);
             this.DGV_Album.TabIndex = 10;
+            this.DGV_Album.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Album_CellContentClick);
             // 
             // BTN_Modifier
             // 
@@ -250,10 +251,10 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(663, 370);
+            this.button1.Location = new System.Drawing.Point(815, 358);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 52);
+            this.button1.Size = new System.Drawing.Size(143, 49);
             this.button1.TabIndex = 17;
             this.button1.Text = "Ajout d\'un monument";
             this.button1.UseVisualStyleBackColor = true;
@@ -261,10 +262,10 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(512, 370);
+            this.button2.Location = new System.Drawing.Point(513, 358);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 52);
+            this.button2.Size = new System.Drawing.Size(143, 49);
             this.button2.TabIndex = 16;
             this.button2.Text = "Recherche de monument";
             this.button2.UseVisualStyleBackColor = true;

@@ -18,6 +18,11 @@ namespace TravailfinaleBD
         public OracleConnection conn = new OracleConnection();
         private DataSet monDataSet = new DataSet();
         private OracleDataAdapter Adapter1 = new OracleDataAdapter();
+        public string NomCircuit;
+        public string VilleD;
+        public string VilleA;
+        public string Duree;
+        public string NbMax;
 
         public MainForm1()
         {
@@ -55,7 +60,7 @@ namespace TravailfinaleBD
             ajouter.Show();
             if (ajouter.DialogResult == DialogResult.OK)
             {
-                
+
             }
             afficherDGV();
         }
@@ -63,6 +68,12 @@ namespace TravailfinaleBD
         private void BTN_Modifier_Click(object sender, EventArgs e)//to so
         {
             ModifierCircuit modifier = new ModifierCircuit();
+            modifier.conn = conn;
+            modifier.NomCircuit = NomCircuit;
+            modifier.Duree = Duree;
+            modifier.VilleD = VilleD;
+            modifier.VilleA = VilleA;
+            modifier.NbMax = NbMax;
             modifier.Show();
         }
 
@@ -116,7 +127,7 @@ namespace TravailfinaleBD
             {
                 AfficherParVilleDebut(TBX_ParNom.Text);//a faire
             }
-            if(RBTN_ParPrix.Checked)
+            if (RBTN_ParPrix.Checked)
             {
                 AfficherParPrix(TBX_ParPrix.Text);
             }
@@ -126,14 +137,14 @@ namespace TravailfinaleBD
             }
         }
 
-        
+
 
         private void afficherDGV()
         {
             try
             {
-                string Tomastatar = "Select Nom,Prix,VilleDebut, VilleArrivee from Circuit";//ajouter le nombre détoile
-               Adapter1.SelectCommand = new OracleCommand(Tomastatar, conn);
+                string Tomastatar = "Select Nom,Prix,VilleDebut, VilleArrivee,Duree,NombreMax from Circuit";//ajouter le nombre détoile
+                Adapter1.SelectCommand = new OracleCommand(Tomastatar, conn);
                 // On vérifie que le DataSet ne contient pas de Data Table de nom "ListeEtudiants"
                 if (monDataSet.Tables.Contains("ListeCircuit"))
                 {
@@ -151,6 +162,7 @@ namespace TravailfinaleBD
             {
                 MessageBox.Show(e.Message.ToString());
             }
+            DGV_Album.CurrentCell = DGV_Album.Rows[0].Cells[0];
         }
 
         private void AfficherParVilleDebut(string NomVille)//a completer
@@ -255,6 +267,20 @@ namespace TravailfinaleBD
                 MessageBox.Show(sqlerror.Message.ToString());
             }
             CBB.SelectedIndex = 0;
+        }
+
+        private void DGV_Album_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.DGV_Album.Rows[e.RowIndex];
+                NomCircuit = row.Cells["Nom"].Value.ToString();
+                VilleD = row.Cells["VilleDebut"].Value.ToString();
+                VilleA = row.Cells["VilleArrivee"].Value.ToString();
+                Duree = row.Cells["Duree"].Value.ToString();
+                NbMax = row.Cells["NombreMax"].Value.ToString();
+
+            }
         }
     }
 }

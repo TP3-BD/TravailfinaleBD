@@ -84,6 +84,7 @@
             // 
             // CBB_VilleArrivee
             // 
+            this.CBB_VilleArrivee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBB_VilleArrivee.FormattingEnabled = true;
             this.CBB_VilleArrivee.Location = new System.Drawing.Point(159, 93);
             this.CBB_VilleArrivee.Name = "CBB_VilleArrivee";
@@ -92,6 +93,7 @@
             // 
             // CBB_VilleDepart
             // 
+            this.CBB_VilleDepart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBB_VilleDepart.FormattingEnabled = true;
             this.CBB_VilleDepart.Location = new System.Drawing.Point(159, 61);
             this.CBB_VilleDepart.Name = "CBB_VilleDepart";
