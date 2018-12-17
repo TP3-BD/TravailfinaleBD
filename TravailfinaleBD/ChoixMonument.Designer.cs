@@ -89,6 +89,7 @@
             this.BTN_Accepter.TabIndex = 10;
             this.BTN_Accepter.Text = "accepter";
             this.BTN_Accepter.UseVisualStyleBackColor = true;
+            this.BTN_Accepter.Click += new System.EventHandler(this.BTN_Accepter_Click);
             // 
             // label5
             // 

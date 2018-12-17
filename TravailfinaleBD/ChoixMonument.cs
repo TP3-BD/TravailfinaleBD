@@ -15,7 +15,7 @@ namespace TravailfinaleBD
 {
     public partial class ChoixMonument : Form
     {
-        public string[] myTab = new string[14];
+        public string[] myTab = new string[5];
         public OracleConnection conn = new OracleConnection();
         private DataSet monDataSet = new DataSet();
         private OracleDataAdapter Adapter1 = new OracleDataAdapter();
@@ -31,7 +31,6 @@ namespace TravailfinaleBD
             initier_ListeMonument(comboBox3);
             initier_ListeMonument(comboBox4);
             initier_ListeMonument(comboBox5);
-           
         }
 
 
@@ -56,9 +55,15 @@ namespace TravailfinaleBD
             }
             CBB.SelectedIndex = 0;
             CBB.DropDownStyle = ComboBoxStyle.DropDownList;
-
         }
 
-        
+        private void BTN_Accepter_Click(object sender, EventArgs e)
+        {
+            myTab[0] = comboBox1.SelectedItem.ToString();
+            myTab[1] = comboBox2.SelectedItem.ToString();
+            myTab[2] = comboBox3.SelectedItem.ToString();
+            myTab[3] = comboBox4.SelectedItem.ToString();
+            myTab[4] = comboBox5.SelectedItem.ToString();
+        }
     }
 }

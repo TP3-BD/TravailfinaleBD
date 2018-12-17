@@ -17,7 +17,7 @@ namespace TravailfinaleBD
     {
 
         ValidationProvider validation;
-        public string[] myTab = new string[14];
+        public string[] myTab = new string[5];
         public OracleConnection conn;
         public DataSet monDataSet;
         public OracleDataAdapter Adapter = new OracleDataAdapter();
@@ -85,7 +85,16 @@ namespace TravailfinaleBD
 
         private void Inserer_Circuit_Monument()
         {
-            //a faire
+            for (int i = 0; i < 4; i++)
+            {
+                string SQLInsert = "INSERT INTO CircuitMonument(NumCircuit,NumeroMonument,OrdreVisite)"
+               + "values" + "((select NumCircuit from Circuit where Nom = '" + TB_NomCircuit + "'),(select NumeroMonument From Monument where Nom = '" + myTab[i] + "'), SEQCIRCUITMONUMENT.nextval)";
+
+                OracleCommand Insert = new OracleCommand(SQLInsert, conn);
+                Insert.ExecuteNonQuery();
+                Adapter.Update(monDataSet.Tables["ListeCircuitMonument"]);
+                monDataSet.AcceptChanges();
+            }
         }
 
 
@@ -120,6 +129,7 @@ namespace TravailfinaleBD
             {
                 BTN_Ajouter.Enabled = true;
             }
+            myTab = choix.myTab;
         }
 
         private void Load_validation()
@@ -148,6 +158,7 @@ namespace TravailfinaleBD
         private void submitTask()
         {
             Inserer_Circuit();
+            Inserer_Circuit_Monument();
         }
 
         
